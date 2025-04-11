@@ -9,17 +9,6 @@ logname = 'simulation';
 tau_rotor = 0.01; % time constant of rotor
 F_dist = [0, 0.5, 0, 0, 0, 0];
 
-% generate LQI gainmatrix
-Q=diag([1/10;1/10;400;   
-        5;5;10;  
-        100;100;100;  
-        5;5;10;  
-        1;1;1/2;  
-        1/10;1/10;1/10]); %state: x y z dx dy dz gamma beta alpha x/s y/s z/s gamma/s beta/s alpha/s
-R=diag([100;100;100; 100;100;100]); % input:[F;M]
-
-run("generate_lqr_gainmatrix.m");
-
 % initial states
 load(strcat('x_nom.mat'))
 load(strcat('Fp_nom.mat'))

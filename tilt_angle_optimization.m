@@ -12,7 +12,7 @@ f_cy_lim = [-1 1];       % fcy range
 f_cz_lim = [-1 1];       % fcz range
 
 % optimization options
-max_iterations = 30;
+max_iterations = 800;
 max_stall_iterations = 500;
 swarm_size = 300; % Particle Swarm Optimization
 
